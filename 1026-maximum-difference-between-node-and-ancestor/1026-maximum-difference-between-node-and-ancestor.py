@@ -18,5 +18,5 @@ class Solution:
             ans=max(ans,a,b)
             dfs(node.left,mn,mx)
             dfs(node.right,mn,mx)
-        dfs(root,root.val,root.val)
+        dfs(root,float("inf"),float("-inf"))
         return ans
