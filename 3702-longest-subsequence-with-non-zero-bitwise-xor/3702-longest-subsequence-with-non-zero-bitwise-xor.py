@@ -1,9 +1,9 @@
 class Solution:
     def longestSubsequence(self, nums: list[int]) -> int:
-        tot = nz = 0
-
-        for n in nums:
-            nz |= n > 0
-            tot ^= n
-
-        return nz * (len(nums) - (not tot))
+        n=len(nums)
+        if n*[0]==nums:
+            return 0
+        x=0
+        for i in nums:
+            x^=i
+        return n if x else n-1
